@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/config.js"></script>
+    <link rel="icon" href="imagens/logo.png" type="image/x-icon">
+    <title>JPD - Frequência de Voluntários</title>
+    <link rel="stylesheet" href="css/frequencia-voluntario.css">
+    <script src="https://kit.fontawesome.com/c65af95cbb.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        .table {
+            width: 100%;
+        }
+        .name-cell {
+            max-width: 150px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
+</head>
+<body>
+    <header class="text-center">
+        <img src="imagens/logo.png" class="mt-3" alt="logo-ong" width="160" height="auto">
+        <h4 class="mt-2">Frequência de Voluntários</h4>
+    </header>
+
+    <div class="container mt-4">
+        <section id="espaco-botoes" class="mb-5 mt-4 text-center">
+           <div class="col-md-6">
+            <a href="bemVindo.html">
+                <button class="botao-voltar">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </button>
+            </a>
+           </div>
+           <div class="col-md-6"></div>
+        </section>
+
+        <section class="mb-5 mt-5 text-center" id="espaco-acoes">
+
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                  Selecionar ações
+                </button>
+                <ul class="dropdown-menu" id="dropdown-menu-list" aria-labelledby="dropdownMenuButton">
+                    <!-- Ações serão adicionadas aqui dinamicamente -->
+                </ul>
+              </div>
+        </section>
+
+        <section class="text-center mb-4">
+            <span class="nome-acao-formatacao mt-4">Nome da ação: </span><span id="nome-acao"></span>
+        </section>
+
+        <section class="espaco-tabela-frequencia">
+            <table class="table table-striped">
+                <thead>
+                    <tr class="table-secondary">
+                        <th>Nome</th>
+                        <th>Equipe</th>
+                        <th>Frequência</th>
+                    </tr>
+                </thead>
+                <tbody id="lista-usuarios">
+                    <!-- Conteúdo dinâmico será inserido aqui -->
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="js/frequencia-voluntario.js"></script>
+</body>
+</html>

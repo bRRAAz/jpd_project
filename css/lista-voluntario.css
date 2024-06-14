@@ -1,0 +1,185 @@
+body, html{
+    padding-top: 0;
+    padding-bottom: 1em;
+    height: 100%;
+
+}
+
+body {
+    background: linear-gradient(45deg, rgba(0,141,187,1) 6%, rgba(0,141,187,1) 36%, rgba(0,212,255,1) 100%)fixed;
+}
+
+header {
+    box-sizing: border-box;
+    padding:0 0 ;
+    color: white;
+}
+
+header>i {
+    font-size: 1.04em;
+}
+
+.container {
+    max-width: 1024px;
+    min-width: 300px;
+    background: rgba( 255, 255, 255 );
+    box-shadow:0 8px 32px 0 rgba(0, 0, 0, 0.5);
+   
+    backdrop-filter: blur( 13.5px );
+    -webkit-backdrop-filter: blur( 13.5px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    padding: 1em 2em 5em 2em;
+    overflow: auto;
+}
+
+#espaco-botoes {
+    display: flex;
+    justify-content: space-around;
+}
+#espaco-botao-carregar{
+    display: flex;
+    justify-content: center;
+}
+button.botao-voltar {
+    padding: 0.3em 0.5em;
+    border: none;
+    color: black;
+    background:none;
+}
+
+button.botao-voltar>i {
+    margin-right: 10px;
+    font-size: 1.5em;
+}
+
+button.botao-buscar-usuarios {
+    border-radius: none;
+    font-weight: 500;
+    color: #fff;
+    border: none;
+    font-size: 1em;
+    padding: 0.5em 1em;
+    background-color: #0d6efd;
+}
+
+
+
+
+button.botao-pesquisar {
+    color: #fff;
+    border: none;
+    color: black;
+    font-size: 1.1em;
+    padding: 0.4em 1em;
+    font-weight: 500;
+}
+
+.botao-editar,
+.botao-deletar {
+    color: #fff;
+    border: none;
+    font-weight: 500;
+    padding: 0.3em 0.9em;
+    
+}
+
+.botao-editar {
+    background-color: rgb(28, 126, 184);
+    margin-right: 5px;
+    
+}
+
+.botao-deletar {
+    background-color: #dc3545;
+
+}
+
+
+
+@media(max-width: 576px){
+    header>img {
+        width: 130px;
+        margin-top: 10px;
+    }
+
+    header>h4,
+    header>i{
+        font-size: 0.9em;
+    
+    }
+
+    button.botao-buscar-usuarios {
+        font-size: 0.85em;
+        
+    }
+    button.botao-pesquisar {
+        font-size: 0.90em;
+    }
+    #espaco-botoes {
+        justify-content: space-between;
+    }
+    .botao-editar {
+        font-size: 0.8em;
+
+        margin-bottom: 5px;
+    }
+
+    .botao-deletar {
+        font-size: 0.8em;
+        padding: 0.3em 0.5em;
+    }
+    
+    
+
+    table {
+        font-size: 0.9em;
+    }
+}
+
+
+
+
+@media(min-width:577px) and (max-width:900px){
+    
+    header>img {
+        width: 150px;
+    }
+
+    header>h4,
+    header>i{
+        font-size: 1em;
+    
+    }   
+
+    button.botao-buscar-usuarios {
+        font-size: 0.90em;
+        
+    }
+
+    button.botao-pesquisar {
+        font-size: 0.90em;
+    }
+
+    .botao-salvar {
+        font-size: 0.9em;
+        padding: 0.3em 0.8em;
+    }
+    #espaco-botoes {
+        justify-content: space-between;
+    }
+
+    table {
+        font-size: 1em;
+    }
+    
+    .botao-editar {
+        font-size: 0.9em;
+
+        margin-bottom: 5px;
+    }
+
+    .botao-deletar {
+        font-size: 0.9em;
+        padding: 0.3em 0.5em;
+    }
+}

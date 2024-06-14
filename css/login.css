@@ -1,0 +1,84 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    background: linear-gradient(45deg, rgba(0,141,187,1) 6%, rgba(0,141,187,1) 36%, rgba(0,212,255,1) 100%) fixed;
+    
+}
+.container{
+    max-width: 900px;
+    min-width: 300px;
+    background-color: white;
+    box-sizing: border-box;
+    box-shadow:0 8px 32px 0 rgba(0, 0, 0, 0.5);
+    /*
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.80 );
+    */
+    backdrop-filter: blur( 13.5px );
+    -webkit-backdrop-filter: blur( 13.5px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.container .formulario {
+    padding: 7em 3em;
+}
+
+h3.titulo {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+i {
+    color: rgb(109, 109, 109);
+}
+
+.imagem-login {
+    background-image: url(../imagens/imagem-login.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+button[type="submit"] {
+    width: 100%;
+    font-weight: 500;
+    border-radius: 0;
+}
+
+input[type="email"],
+input[type="password"]{
+    border: none;
+    border-bottom: solid rgb(211, 206, 206) 1px;
+    border-radius: 0;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+} 
+
+label {
+    font-size: 0.95em;
+    color: rgb(172, 170, 170);
+}
+
+#email-error,
+#senha-error {
+    display: none;
+}
+
+
+
+
+
+@media(min-width:200px) and (max-width:576px){
+    body {
+        padding: 0 1em;
+    }
+}
+

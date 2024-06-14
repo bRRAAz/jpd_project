@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imagens/logo.png" type="image/x-icon">
+    <title>JPD - Edição de Voluntário</title>
+    <script src="./js/config.js"></script>
+    <!--FONTAWESOME-->
+    <script src="https://kit.fontawesome.com/c65af95cbb.js" crossorigin="anonymous"></script>
+
+    <!--BOOTSTRAP-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <script src="js/editar-cadastro.js"></script>
+
+    <!--css-->
+    <link rel="stylesheet" href="css/cadastro.css">
+</head>
+
+<body>
+    <header class="text-center">
+        <img src="imagens/logo.png" class="mt-3" alt="logo-ong" width="160" height="auto">
+        <h4 class="mt-2">EDIÇÃO DE VOLUNTÁRIO</h4>
+        <i>Edite os dados corretamente.</i>
+    </header>
+    
+    <div class="container mt-4">
+        <section id="espaco-formulario"> 
+            <a href="lista-voluntarios.html"> 
+                <button class=" botao-voltar">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </button>
+            </a>
+
+
+            <div autocomplete="none" class="mb-5" id="form-edicao">
+                <div class="row mt-5">
+                    <div class="col-md-6 form-floating">
+                        <input type="text" class="form-control" name="nome_voluntario" id="campo-nome" required>
+                        <label for="campo-nome">Nome completo* </label>
+                    </div>
+                    <div class="col-md-6 form-floating">
+                        <input type="text" class="form-control" name="nome_voluntario-social" id="campo-nome-social">
+                        <label for="campo-nome-social">Nome social </label>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-3">
+                        <label for="campo-genero" class="select">Gênero*</label>
+                        <select class="form-control" name="genero" id="campo-genero" required>
+                            <option value="" selected>-----</option>
+                            <option value="feminino">Feminino</option>
+                            <option value="masculino">Masculino</option>
+                            <option value="nao-informado">Não-binário</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="campo-pronome" class="select">Pronomes*</label>
+                        <select name="pronome" class="form-control" id="campo-pronome" required>
+                            <option value="" selected>-----</option>
+                            <option value="ela-dela">Ela/dela</option>
+                            <option value="ele-dele">Ele/dele</option>
+                            <option value="nao-informado">Não informado</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 form-floating">
+                        <input type="date" class="form-control pb-1" name="data_nascimento" id="campo-data-nascimento" required>
+                        <label for="campo-data-nascimento">Data de nascimento*</label>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-6 form-floating">
+                        <input type="email" class="form-control" name="email_voluntario" id="campo-email" required>
+                        <label for="campo-email">Email*</label>
+                    </div>
+                    <div class="col-md-3 form-floating">
+                        <input type="tel" class="form-control" name="telefone_principal" id="campo-telefone-principal" required>
+                        <label for="campo-telefone-principal">Telefone (Principal)*</label>
+                    </div>
+                    <div class="col-md-3 form-floating">
+                        <input type="tel" class="form-control" name="telefone_emergencia" id="campo-telefone-emergencial" required>
+                        <label for="campo-telefone-emergencial">Telefone (Para emergência)*</label>
+                    </div>
+                </div>
+                <div class="row mt-4">  
+                    <div class="col-md-6 form-floating">
+                        <input type="date" class="form-control pb-1" name="data_ingressao" id="campo-data-ingressao" required>
+                        <label for="campo-data-ingressao">Data de ingressão da ONG*</label>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="campo-equipe" class="select">Equipe*</label>
+                        <select class="form-control" name="equipe" id="campo-equipe" required>
+                            <option value="" selected>-----</option>
+                            <option value="brincadeira_livre">Brincadeira livre</option>
+                            <option value="pintura">Pintura</option>
+                            <option value="brinquedoteca">Brinquedoteca</option>
+                            <option value="salao_de_beleza">Salão de beleza</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3 form-floating">
+                        <input type="number" class="form-control" name="numero_acoes" id="campo-numero-acoes" required>
+                        <label for="campo-numero-acoes">Números de ações*</label>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <span>Membro de setor? </span>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="membro_setor" id="campo-membro-sim" value="sim">
+                            <label class="form-check-label" for="campo-membro-sim">Sim</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="membro_setor" id="campo-membro-nao" value="nao" checked>
+                            <label class="form-check-label" for="campo-membro-nao">Não</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <span>Coordenador? </span>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="coordenador" id="campo-coordenador-sim" value="sim">
+                            <label class="form-check-label" for="campo-coordenador-sim">Sim</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="coordenador" id="campo-coordenador-nao" value="nao" checked>
+                            <label class="form-check-label" for="campo-coordenador-nao">Não</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <label for="campo-setor" class="form-label select">Em qual setor?</label>
+                        <select name="setor" id="campo-setor" class="form-control" disabled>
+                            <option selected>-----</option>
+                            <option value="planejamento">Planejamento</option>
+                            <option value="endomarketing">Endomarketing</option>
+                            <option value="gestao_de_recurso">Gestão de recurso</option>
+                            <option value="comunicacao">Comunicação</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="campo-coordenador-setor" class="form-label select">Coordenador setor</label>
+                        <select name="coordenador_funcao" id="campo-coordenador-setor" class="form-control" disabled>
+                            <option selected>-----</option>
+                            <option value="planejamento">Planejamento</option>
+                            <option value="endomarketing">Endomarketing</option>
+                            <option value="gestao_de_recurso">Gestão de recurso</option>
+                            <option value="comunicacao">Comunicação</option>
+                        </select>
+                    </div>
+                </div>
+                
+
+
+                <section class="botao">
+                    <button class="btn btn-primary mt-5 cadastrar" name="salvar_voluntario" id="editar" onclick="editarVoluntario()">
+                        Atualizar
+                    </button>
+                </section>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        //habilitando o campo EM QUAL SETOR
+        let simMembroSetor = document.getElementsByName('membro_setor');
+        let setor = document.getElementById('campo-setor');
+
+        setor.disabled = true;
+
+        for (let i = 0; i < simMembroSetor.length; i++) {
+            simMembroSetor[i].addEventListener('change', function() {
+            setor.disabled = !simMembroSetor[0].checked;
+            });
+        }
+
+
+
+        //habilitando o campo coordenador função
+        let simCoordenador = document.getElementsByName('coordenador');
+        let coordenadorSetor = document.getElementById('campo-coordenador-setor');
+
+        coordenadorSetor.disabled = true;
+
+        for (let i = 0; i < simCoordenador.length; i++) {
+            simCoordenador[i].addEventListener('change', function() {
+            coordenadorSetor.disabled = !simCoordenador[0].checked;
+            });
+        }
+    </script>
+
+    
+</body>
+</html>
