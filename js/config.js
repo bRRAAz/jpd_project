@@ -1,3 +1,3 @@
 var configuracaoGlobal = {
-    URL: 'https://2856-2804-29b8-5179-39f-e02e-1a6e-7ae4-275e.ngrok-free.app'
+    URL: 'https://1fa5-2804-d4b-9a20-3500-ddec-b7ce-af8b-a476.ngrok-free.app'
 };
